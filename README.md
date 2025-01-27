@@ -11,6 +11,7 @@ pip install tryonai
 export TRYONAI_SERVER_URL=https://prod.server.tryonlabs.ai
 export TRYONAI_EMAIL=your_email@example.com
 export TRYONAI_PASSWORD=your_password
+export TRYONAI_ACCESS_TOKEN=your_access_token
 ```
 
 # Usage
@@ -22,6 +23,7 @@ from tryonai import get_access_token
 access_token = get_access_token(email=os.getenv('TRYONAI_EMAIL'), password=os.getenv('TRYONAI_PASSWORD'))
 print("access_token:", access_token)
 ```
+Note: Put the access token in the environment variable `TRYONAI_ACCESS_TOKEN`.
 
 ## Upload Image
 ```python
@@ -84,4 +86,3 @@ from tryonai import download_image
 # Download image
 download_image(image_url=experiment_result_image_url, image_path="data/result.png")
 ```
-
